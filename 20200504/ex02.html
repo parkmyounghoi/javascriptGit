@@ -1,0 +1,56 @@
+<!--
+    1.원의 반지름 입력시 원넓이와 원둘레
+    2.1~100까지 소수를 출력해라
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    반지름 : <input type="text" name="" id="r"><br/>
+    <button id="btnA">원</button>
+    <button id="btnB">소수</button>
+    <div id="printArea">
+
+    </div>
+</body>
+</html>
+<script>
+    /*
+    var a = document.getElementById("btnA");
+    a.onclick = function(){}
+    */
+
+    document.getElementById("btnA").onclick = function(){
+        // var input_r = document.getElementById("r");
+        // var r = input_r.value;
+        var r= document.getElementById("r").value;
+        document.getElementById("printArea").innerHTML = 
+                "원 넓이는 = "+(r*r*3.14)+"<br/>"+"원 둘레는"+(2*r*3.14)+"입니다";
+    }
+    // 소수
+    function primeNumber(a){
+        var cnt = 0;
+        for(var i =1 ; i<a+1 ; i++){
+            if(a%i==0)
+                cnt++;
+        }
+        if(cnt==2)
+            return true;
+        else
+            return false;
+    }
+    document.getElementById("btnB").onclick = function(){
+        //document.getElementById("printArea").append("aaa");
+        for(var i=2; i<101;i++){
+            if(primeNumber(i)){
+                console.log("잘되고있냐");
+                document.getElementById("printArea").append(i+" ")
+            }
+        }
+
+    }
+</script>

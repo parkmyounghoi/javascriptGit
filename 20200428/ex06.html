@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mdiv">
+
+    </div>
+    <input type="text" id="minput">
+</body>
+</html>
+<script>
+
+    var mdiv = document.getElementById("mdiv")
+    mdiv.innerHTML = "abcdf";
+    mdiv.innerHTML = "aaaaa";
+    mdiv.innerHTML = mdiv.innerHTML + "aaaa";
+
+    var minput = document.getElementById("minput")
+
+    var bindexof = "abcdef".indexOf("b");
+    var cindexof = "abcdef".indexOf("c");
+
+    var gindexof = "abcdef".indexOf("g");
+
+    console.log("bindexof = "+bindexof);
+    console.log("cindexof = "+cindexof);
+
+    console.log("gindexof = "+gindexof);
+
+    var a = prompt();
+</script>

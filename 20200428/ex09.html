@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dansu">
+    <button onclick="doGugudan()">구구단출력</button>
+    <div id="_div">
+    </div>
+</body>
+</html>
+<script>
+    function doGugudan(){
+        // var number = document.getElementById("dansu").value;
+        var number = document.getElementById("dansu");
+        number = number.value;
+        var alertoutput = "";
+        var mdivoutput = "";
+
+        for(var i = 1; i<10 ; i++){
+            alertoutput = alertoutput + (number + " * "+ i +" = ")+(number * i)+" ";
+            mdivoutput = mdivoutput + (number + " * "+ i +" = ")+(number * i)+"<br/>";
+        }
+        alert(alertoutput);
+
+        var mdiv = document.getElementById("_div")
+        mdiv.innerHTML = mdivoutput;
+
+        mdiv.style.background = "blue";
+        mdiv.style.margin = "30px";
+        mdiv.style.padding = "30px";
+    }
+</script>

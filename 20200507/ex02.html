@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    // document.getElementById(); html 태그에서 id값 참조해서 가져오기
+    // innerHTML 해당 태그 사이에 값 넣는거 innerHTML = "aaa" 이런식으로 사용
+    // append() 해당태그 사이에 추가적으로 붙여넣기 append("aaa") 이런식으로 사용
+    // replace("a","b")  a 문자를 b 문자로 바꾸기
+    // confirm() <- 거짓 참 가져오기 확인시 = 참 , 취소시 =거짓
+
+
+    // var result = confirm("계속하시겠습니까?");
+    // alert("result = "+result);
+
+    // while(true){
+    //     if(  !confirm("계속 할꺼냐") ){
+    //         break;
+    //     }
+    // }
+
+    // for (let i = 0; i < 10; i++) {
+    //     if(i==3){
+    //         continue;
+    //     }
+    //     console.log("i = "+i);
+    // }
+
+    for (const a of [10,20,30,40]) {
+        console.log("a = "+a);
+    }
+
+    for (const b of [ { a:10,b:20 }, { a:20,b:30 },{ a:30,b:40 }]) {
+        console.log("b.a = "+ b.a);
+        console.log("b.b = "+ b.b);
+    }
+</script>

@@ -1,0 +1,75 @@
+<!--
+    1. 정수 둘을 인자로 받아 사칙연산
+    2. 정수 둘을 인자로 받아 차의 절대값
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a"/>
+    <input type="text" id="b"/>
+    <!-- <button id="btnA" onclick="doA();">사칙연산출력</button> -->
+    <button id="btnA">사칙연산출력</button>
+    <button id="btnB">절대값</button>
+    <div id="printArea">
+    </div>
+</body>
+</html>
+<script>
+    function doA(){}
+
+    var result = "출력test";
+    document.getElementById("printArea").innerHTML = result;    
+
+    var btnA = document.getElementById("btnA");
+    btnA.onclick = function(){
+        var result = "";
+
+        var num1 = document.getElementById("a").value;
+        var num2 = document.getElementById("b").value;
+
+        console.log("num1 = "+num1);
+        console.log("num2 = "+num2);
+
+        result = num1 + "+" + num2 +"=" + (   Number(num1) + Number(num2) )+"<br>";
+        result = result + num1 + "-" + num2 +"=" + (   Number(num1) - Number(num2) )+"<br>";
+        result += num1 + "*" + num2 +"=" + (   Number(num1) * Number(num2) )+"<br>";
+        result += num1 + "/" + num2 +"=" + (   Number(num1) / Number(num2) );
+
+        document.getElementById("printArea").innerHTML = result;    
+    }
+
+    var btnB = document.getElementById("btnB");
+    btnB.onclick = function(){
+        // alert("버튼누름");
+        var num1 = document.getElementById("a").value;
+        var num2 = document.getElementById("b").value;
+
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        if( num1 > num2){
+            document.getElementById("printArea").innerHTML = num1-num2+"입니다"
+        }
+        else{
+            document.getElementById("printArea").innerHTML = num2-num1+"입니다."
+        }
+    }
+
+    // var aa = {
+    //     doB:function(){
+    //         console.log("aa.boB함수");
+    //     }
+    // };
+    // aa.doA = function(){
+    //     console.log("aa.doA 함수 호출");
+    // }
+
+    // aa.doA();
+    // aa.doB();
+
+</script>

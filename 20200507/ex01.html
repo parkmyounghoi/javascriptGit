@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="printArea">
+
+    </div>
+</body>
+</html>
+<script>
+    var star="";
+    var k = 1;
+    for (let i = 0; i < 10; i++) {
+        // 칸 띄우기
+        for (let j = 0; j < 9-i; j++) {
+            star = star + "&nbsp;";
+        }
+        // 별표 1 3 5 7 9 11 13 15 17 19
+        for (let j = 0; j < k; j++) {
+            star = star + "*";
+        }
+        k= k+2;
+
+        star +="<br/>";
+    }
+    alert(star);
+    // star = star.replace("\n","<br/>");
+    document.getElementById("printArea").innerHTML=star;
+</script>

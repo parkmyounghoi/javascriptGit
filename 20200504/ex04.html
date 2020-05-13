@@ -1,0 +1,53 @@
+<!--
+1. 2의 n승을 반환하는 재귀 메서드
+2. 십진수를 전달받아 이진수로 출력하는 재귀 메서드
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a">
+    <button id="btnA">n승확인</button>
+    <button id="btnB">10진수확인</button>
+    <div id="mdiv"></div>
+</body>
+</html>
+<script>
+    function fac(a){
+        if(a>0){ return 2*fac(a-1) }
+        else{ return 1 }
+    }
+    function bina(a){
+        if(a==1 || a==0){ 
+            return a
+        }
+        else{ 
+            return bina(parseInt(a/2)) +""+ a%2;
+        }
+    }
+    document.getElementById("btnA").onclick = function(){
+        var a = document.getElementById("a").value;
+        var result = fac(Number(a));
+        /* 
+            fac(3)
+            2 * fac(2)
+            2 * 2 * fac(1)
+            2 * 2 * 2 * fac(0)
+            2 * 2 * 2 * 1 = 8
+        */
+        // document.body.append(result);
+        // document.body.innerHTML = result;
+        document.getElementById("mdiv").innerHTML = result;
+    }
+    document.getElementById("btnB").onclick = function(){
+        var a = document.getElementById("a").value;
+        // var b = 10.3;
+        // alert(parseInt(b));
+        var result = bina(Number(a));
+        document.getElementById("mdiv").innerHTML = result;
+    }
+</script>

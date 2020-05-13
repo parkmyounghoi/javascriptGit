@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function squ(x){
+    //     return 0;
+    // }
+
+    function py(x,y){
+        function squ(x){
+            return x*x;
+        }
+        return "r = "+ Math.sqrt( squ(x) + squ(y) );
+    }
+    document.body.innerHTML = py(3,4);
+    document.body.innerHTML = squ(3);
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mdiv" style="width: 100px; height: 100px; background-color: red;"></div>
+    <!-- <button onclick="">btn</button> -->
+</body>
+</html>
+<script>
+    // setTimeout(function(){ 
+    //     document.getElementById("mdiv").style.marginLeft = "50px";
+    // } , 3000);
+    var a = 50;
+    var myI = setInterval(function(){ 
+        document.getElementById("mdiv").style.marginLeft = a+"px";
+        a = a+50;
+    } , 3000);
+
+    setTimeout(function (){clearInterval(myI)},10000);
+
+    
+</script>

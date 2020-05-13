@@ -1,0 +1,47 @@
+<!-- 
+2. 1부터 100까지 더하는 프로그램을 만들어보세요
+만든다음에는 사용자에게 입력을 받아 특정한 숫자부터 특정한 숫자까지 더하는 프로그램
+3. 1부터 100까지 곱하는 프로그램
+만든다음에는 사용자에게 입력을 받아 특정한 숫자부터 특정한 숫자까지 더하는 프로그램
+4. 52 273 103 32 57 103 31 2 와 같은 숫자 배열 최댓값 최솟값 
+
+화수목
+26,28
+화목
+C#
+
+6월
+월화 C#
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="start">
+    <input type="text" name="" id="end">
+    <button id="btna">확인</button>
+    <div id="print"></div>
+</body>
+</html>
+<script>
+    var sum = 0;
+    for (let i = 0; i < 101; i++) {
+        sum += i;
+    }
+    document.getElementById("btna").onclick = function(){
+        var start = Number(document.getElementById("start").value);
+        var end = Number(document.getElementById("end").value);
+        console.log("start ="+start);
+        console.log("end ="+end);
+        sum = 0;
+        for (let i = start; i < end; i++) {
+            sum += i;
+            console.log("sum = "+sum);
+        }
+        document.getElementById("print").innerHTML = ("sum = "+sum);
+    }
+</script>

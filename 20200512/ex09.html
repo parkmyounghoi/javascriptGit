@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+            float: left;
+            background-color: aqua;
+            border-radius: 2px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            document.getElementById("btnA").onclick = function(){
+            var inputValue = document.getElementById("inputA").value;
+                alert(eval(inputValue));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>덧셈,나눗셈,곱셉,뺄셈</h1>
+    <div id="input">
+        <input type="text" name="" id="inputA" value="1+2*3">
+        <button id="btnA">확인</button>
+    </div>
+    <div id="container">
+        <div class="calculator">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+    1.이전장에서 연습문제에서 입력에 안녕이 들어가 있으면 안녕하세요를 출력하는 프로그램을
+    만들었습니다. 여기에 반복문을 적용해서 계속해서 입력을 받게하고, 입력한 문장
+    또는 현재 시각에 따라서 다양한 질문과 답변을 하는 프로그램을 만들어 보세요.
+    2. 1부터 100까지 더하는 프로그램을 만들어보세요
+    만든다음에는 사용자에게 입력을 받아 특정한 숫자부터 특정한 숫자까지 더하는 프로그램
+    3. 1부터 100까지 곱하는 프로그램
+    만든다음에는 사용자에게 입력을 받아 특정한 숫자부터 특정한 숫자까지 더하는 프로그램
+    4. 52 273 103 32 57 103 31 2 와 같은 숫자 배열 최댓값 최솟값 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    // 안녕하세요 안녕 나
+    while(true){
+        var input = prompt("입력하세요","");
+        console.log("input = "+input);
+
+        var today = new Date();
+
+        today.setHours(14);
+
+        var 현재시간 = (today.getHours()) +"시" + today.getMinutes() + "분";
+
+        if( ( input.indexOf("안녕") > -1 ) && ( today.getHours() > 6 && today.getHours() < 12 ) ){
+            alert("안녕하세요 현재 시간은 6시 초과 12시 미만입니다.");
+        }
+        else if( ( input.indexOf("안녕") > -1 ) && ( today.getHours() > 12 && today.getHours() < 24) ){
+            alert("안녕하세요 현재 시간은 12시 초과 24시 미만입니다");
+        }
+        else if( input.indexOf("굿모닝") > -1 ){
+            alert("굿모닝");
+        }
+        else if( input.indexOf("밥뭇나") > -1 ){
+            alert("아뇨 배고파요");
+        }
+        else if( input.indexOf("종료") > -1 ){
+            break;
+        }
+    }
+</script>
