@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function makeStudent(name,math,eng){
+    //     var student = {"이름":name,"수학":math,"영어":eng};
+    //     return student;
+    // }
+    function Student(name,math,eng){
+        this.이름 = name;
+        this.수학 = math;
+        this.영어 = eng;
+    }
+    var students = [];
+    // students.push(makeStudent("박",100,100));
+    // students.push(makeStudent("김",100,100));
+    // students.push(makeStudent("이",100,100));
+
+    students.push(new Student("박",100,100));
+    students.push(new Student("김",100,100));
+    students.push(new Student("이",100,100));
+
+    console.log(students);
+
+    var a;
+    // alert(a);
+    if(a){
+        alert("a의 값은 초기화 하지 않았기 때문에 true");
+    }
+    else{
+        alert("a의 값은 초기화 하지 않았기 때문에 false");
+    }
+    alert( a || 10);
+</script>
